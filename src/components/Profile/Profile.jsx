@@ -5,8 +5,13 @@ import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Ratings from "../Ratings/Ratings";
+
+
 
 function Profile() {
+ 
+
   return (
     <div>
       <section className="py-4">
@@ -165,6 +170,11 @@ function Profile() {
                       <button className="btn btn-light">Cancel</button>
                     </div>
                   </Tab.Pane>
+                  <Tab.Pane eventKey="third" className="p-4 p-md-5">
+                    {/* <Sonnet /> */}
+                    <h3 className="mb-4">Rating</h3>
+                    <Ratings/>
+                  </Tab.Pane>
                 </Tab.Content>
               </Col>
             </Row>
@@ -174,5 +184,7 @@ function Profile() {
     </div>
   );
 }
+
+
 
 export default Profile;
