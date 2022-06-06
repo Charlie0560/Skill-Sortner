@@ -1,7 +1,7 @@
 import React from "react";
 import img from './images.png'
 
-function Card() {
+function Card({data}) {
   return (
       <div class="column">
         <div class="team">
@@ -10,7 +10,7 @@ function Card() {
           </div>
           <div class="team-content">
             <h2>PICT</h2>
-            <h3>Developer</h3>
+            <h3>{data.InterestedIn}</h3>
             <p>Some text goes here that describes about student</p>
           </div>
           <div class="team-social">

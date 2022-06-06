@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Col,
@@ -10,6 +10,11 @@ import {
 import Cards from "../Cards/Cards";
 import "./home.css";
 function Home() {
+  const [filter, setFilter] = useState("All");
+
+  const handleFilter = (value) => {
+    setFilter(value);
+  };
   return (
     <div className="container">
       <center>
@@ -31,20 +36,46 @@ function Home() {
           <Col sm={2} className="filter">
             <div>
               <h5>Filter</h5>
-              <Form.Check aria-label="option 1" label="All" />
-              <Form.Check aria-label="option 2" label="Web developer" />
-              <Form.Check aria-label="option 3" label="App developer" />
-              <Form.Check aria-label="option 4" label="Game Developer" />
+              <Form.Check
+                aria-label="option 1"
+                label="All"
+                onClick={() => handleFilter("All")}
+                checked
+              />
+              <Form.Check
+                aria-label="option 2"
+                label="Web developer"
+                onClick={() => handleFilter("Web Developer")}
+              />
+              <Form.Check
+                aria-label="option 3"
+                label="App developer"
+                onClick={() => handleFilter("App Developer")}
+              />
+              <Form.Check
+                aria-label="option 4"
+                label="Game Developer"
+                onClick={() => handleFilter("Game Developer")}
+              />
               <Form.Check
                 aria-label="option 5"
                 label="Competitive Programmer"
+                onClick={() => handleFilter("Competitive Programmer")}
               />
-              <Form.Check aria-label="option 6" label="Data Analyst" />
-              <Form.Check aria-label="option 7" label="Management" />
+              <Form.Check
+                aria-label="option 6"
+                label="Data Analyst"
+                onClick={() => handleFilter("Data Analyst")}
+              />
+              <Form.Check
+                aria-label="option 7"
+                label="Management"
+                onClick={() => handleFilter("Management")}
+              />
             </div>
           </Col>
           <Col sm={10} className="profilecards">
-            <Cards />
+            <Cards filter={filter} />
           </Col>
         </Row>
       </div>
