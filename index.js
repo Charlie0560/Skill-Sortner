@@ -6,12 +6,15 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
-const cloudinary = require("cloudinary");
-const fileUpload = require("express-fileupload");
 const bodyParser = require("body-parser");
+const fileUpload = require("express-fileupload");
+
 
 dotenv.config();
 
+app.use(fileUpload({
+  useTempFiles: true
+}))
 try {
   mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
     console.log("Connected to MONGODB");
@@ -32,7 +35,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json({limit: '500mb'}));
 
-app.use(fileUpload())
+
 // const storage = multer.diskStorage({
 //   destination: (req, file, cb) => {
 //     cb(null, "images");
@@ -50,11 +53,7 @@ app.use(fileUpload())
 //     console.log(err);
 //   }
 // });
-cloudinary.config({
-  cloud_name: 'dtxkshwd3',
-  api_key: '442996997661829',
-  api_secret: 'iqBET0Q3vnRlzsneahArIrT-SNU',
-});
+
 app.listen(5000, () => {
   console.log("Backend is running!");
 });
