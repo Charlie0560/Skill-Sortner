@@ -11,17 +11,18 @@ import Cards from "../Cards/Cards";
 import "./home.css";
 function Home() {
   return (
-    <div className="container">
-      <center>
-        <div className="filterdiv">
+    <div className="container" style={{color:"cyan"}} >
+      <center >
+        <div className="filterdiv" >
           <InputGroup className="mt-3">
             <FormControl
               placeholder="Search By Name"
               aria-label="Search By Name"
               aria-describedby="basic-addon2"
+              style={{backgroundColor:"black",color:"cyan",padding:"20px"}}
             />
-            <Button variant="outline-secondary" id="button-addon2">
-              Search
+            <Button variant="outline-secondary" id="button-addon2" className="search1" style={{borderRadius:"5px"}}>
+            &#128269;
             </Button>
           </InputGroup>
         </div>
@@ -30,7 +31,7 @@ function Home() {
         <Row>
           <Col sm={2} className="filter">
             <div>
-              <h5>Filter</h5>
+              <h5 style={{color:"cyan"}}>Filter</h5>
               <Form.Check aria-label="option 1" label="All" />
               <Form.Check aria-label="option 2" label="Web developer" />
               <Form.Check aria-label="option 3" label="App developer" />

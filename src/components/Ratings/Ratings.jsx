@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import "./ratings.css";
 
 const colors = {
-  orange: "#FFBA5A",
+  orange: "cyan",
   grey: "#a9a9a9",
 };
 
@@ -99,12 +100,12 @@ function Ratings() {
   };
 
   return (
-    <div className="container">
-      <h6>Rate Yourself</h6>
+    <div className="container" style={{color:"white"}}>
+      <h6 style={{color:"white",fontSize:"19px"}}>Rate Yourself</h6>
       <ul>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>Web Development</h5>
+            <h5 style={{ marginRight: "10px",color:"white" }} >Web Development</h5>
             {webdevStars.map((_, index1) => {
               return (
                 <FaStar
@@ -121,15 +122,16 @@ function Ratings() {
                   style={{
                     marginRight: 10,
                     cursor: "pointer",
+                    
                   }}
                 />
               );
             })}
           </div>
         </li>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>App Development</h5>
+            <h5 style={{ marginRight: "10px",color:"white" }}>App Development</h5>
             {webdevStars.map((_, index) => {
               return (
                 <FaStar
@@ -152,9 +154,9 @@ function Ratings() {
             })}
           </div>
         </li>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>Game Development</h5>
+            <h5 style={{ marginRight: "10px",color:"white" }}>Game Development</h5>
             {webdevStars.map((_, index) => {
               return (
                 <FaStar
@@ -177,9 +179,9 @@ function Ratings() {
             })}
           </div>
         </li>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>Competitive Programming</h5>
+            <h5 style={{ marginRight: "10px",color:"white" }}>Competitive Programming</h5>
             {webdevStars.map((_, index) => {
               return (
                 <FaStar
@@ -202,9 +204,9 @@ function Ratings() {
             })}
           </div>
         </li>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>Data Analyst</h5>
+            <h5 style={{ marginRight: "10px",color:"white" }}>Data Analyst</h5>
             {webdevStars.map((_, index) => {
               return (
                 <FaStar
@@ -227,9 +229,9 @@ function Ratings() {
             })}
           </div>
         </li>
-        <li>
+        <li style={{padding:"7px"}}>
           <div style={styles.webdevStars}>
-            <h5 style={{ marginRight: "10px" }}>Management</h5>
+            <h5 style={{ marginRight: "10px" ,color:"white"}}>Management</h5>
             {webdevStars.map((_, index) => {
               return (
                 <FaStar
@@ -254,7 +256,7 @@ function Ratings() {
         </li>
       </ul>
 
-      <button style={styles.button} onClick={handleSubmit}>
+      <button className="btn btn-primary" style={styles.button} onClick={handleSubmit}  >
         Submit
       </button>
     </div>
@@ -275,10 +277,10 @@ const styles = {
     width: 300,
   },
   button: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 100,
-    padding: 5,
+    // border: "1px solid #a9a9a9",
+    // borderRadius: 5,
+    // width: 100,
+    // padding: 5,
   },
 };
 export default Ratings;

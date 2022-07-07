@@ -9,12 +9,26 @@
 html{
     font-family: sans-serif;
     line-height: 1.15;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .6rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: rgb(146, 144, 144);
+    border-radius: 5rem;
 }
 body{
     font-family: 'lato', sans-serif;
     color: #454545;
     font-weight: 300;
-    background: #ffffff;
+    background: #d3cece;
 }
 a{
     color: #333333;
@@ -88,7 +102,7 @@ img{
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
+    margin-right: -55px;
     margin-left: -15px;
 }
 .column{
@@ -111,24 +125,27 @@ img{
     width: 160px;
     height: auto;
     border-radius: 100%;
-    border: 20px solid #f3f4fa;
+    border: 20px solid black;
 }
 
 .team .team-content{
     padding: 80px 20px 20px 20px;
     margin-top: -80px;
     text-align: center;
-    background: #f3f4fa;
+    background: black;
     border-radius: 10px;
+    color: cyan;
 }
 .team .team-content h2{
 font-size: 25px;
 font-weight: 400;
 letter-spacing: 2px;
+color: cyan;
 }
 .team .team-content h3{
     font-size: 16px;
     font-weight: 300;
+    color: cyan;
 }
 .team .team-content h4{
     font-size: 16px;
@@ -136,11 +153,13 @@ font-weight: 300;
 letter-spacing: 1px;
 font-style: italic;
 margin-bottom: 0;
+color: cyan;
 }
 .team .team-content p{
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+    color: cyan;
 }
 .team .team-social{
     position: absolute;
@@ -152,7 +171,7 @@ margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, .6);
+    background: rgba(39, 38, 38, 0.6);
     transition: all .3s;
     font-size: 0;
     z-index: 1;
@@ -166,7 +185,7 @@ margin-bottom: 0;
     width: 40px;
     height: 40px;
     margin-right:5px ;
-    padding: 11px 0 10px 0;
+    padding: 11px 0 15px 11px;
     font-size: 16px;
     font-weight: 300;
     line-height: 16px;
@@ -184,7 +203,8 @@ margin-bottom: 0;
     background: linear-gradient(180deg,rgb(122, 66, 233) ,rgb(221, 38, 59))
 }
 .team .team-social a.social-yt{
-    background: #c4302b;
+    background: black;
+
 }
 .team .team-social a:last-child{
     margin-right: 0;
@@ -198,14 +218,16 @@ margin-bottom: 0;
 
 .filter{
     padding-inline: 10px;
-    background-color: #F4F5FA;
+    background-color: black;
+    color: cyan;
     padding: 2%;
+    margin-top: 40px;
     height: max-content;
 }
 
 .profilecards{
     height: 70vh;
-    overflow-y: scroll;
+    overflow-y: fixed;
 }
 /* Mobile Responsive */
 
@@ -242,7 +264,13 @@ margin-bottom: 0;
 
 .filterdiv{
     width: 40%;
-    
+    margin-top: 40px;
+    border-radius: 20%;
+    color:cyan;
+    background-color: black;
+}
+.search1{
+    background-color: black;
 }
 
 @media (max-width: 768px) {
@@ -254,5 +282,8 @@ margin-bottom: 0;
 @media (max-width: 468px) {
     .filterdiv{
         width: 100%;
+    }
+    .row{
+        margin-right: -15px;
     }
 }

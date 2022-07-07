@@ -37,3 +37,24 @@ body {
 	border-radius: 100%;
 	border: 5px solid #fff;
 }
+.btn{
+	border-radius: 10px;
+	/* padding: 10px; */
+	/* margin-top: 20px; */
+}
+.bt1{
+	margin-left: 20px;
+}
+.bt2:hover{
+    background-color: rgb(36, 36, 208);
+}
+.bt1:hover{
+	background-color: rgb(136, 5, 5);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	/* border-top: 1px solid white; */
+	 /* border-right: 1px solid white;  */
+	border-radius: 15px;
+}
