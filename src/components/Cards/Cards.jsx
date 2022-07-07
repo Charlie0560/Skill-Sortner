@@ -3,10 +3,13 @@ import Card from "../Card/Card";
 
 function Cards({ filter }) {
   const cards = [
+    
     { InterestedIn: "Web Developer" },
     { InterestedIn: "App Developer" },
     { InterestedIn: "Game Developer" },
-    { InterestedIn: "Web Developer" },
+    { InterestedIn: "Competitive Programmer" },
+    { InterestedIn: "Data Analyst" },
+    { InterestedIn: "Management" },
   ];
   return (
     <div className="container">

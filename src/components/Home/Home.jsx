@@ -9,6 +9,9 @@ import {
 } from "react-bootstrap";
 import Cards from "../Cards/Cards";
 import "./home.css";
+
+
+
 function Home() {
   const [filter, setFilter] = useState("All");
 
@@ -16,7 +19,7 @@ function Home() {
     setFilter(value);
   };
   return (
-    <div className="container">
+    <div className="container" style={{ color: "cyan" }}>
       <center>
         <div className="filterdiv">
           <InputGroup className="mt-3">
@@ -24,9 +27,19 @@ function Home() {
               placeholder="Search By Name"
               aria-label="Search By Name"
               aria-describedby="basic-addon2"
+              style={{
+                backgroundColor: "black",
+                color: "cyan",
+                padding: "20px",
+              }}
             />
-            <Button variant="outline-secondary" id="button-addon2">
-              Search
+            <Button
+              variant="outline-secondary"
+              id="button-addon2"
+              className="search1"
+              style={{ borderRadius: "5px" }}
+            >
+              &#128269;
             </Button>
           </InputGroup>
         </div>
@@ -35,28 +48,11 @@ function Home() {
         <Row>
           <Col sm={2} className="filter">
             <div>
-              <h5>Filter</h5>
-              <Form.Check
-                aria-label="option 1"
-                label="All"
-                onClick={() => handleFilter("All")}
-                checked
-              />
-              <Form.Check
-                aria-label="option 2"
-                label="Web developer"
-                onClick={() => handleFilter("Web Developer")}
-              />
-              <Form.Check
-                aria-label="option 3"
-                label="App developer"
-                onClick={() => handleFilter("App Developer")}
-              />
-              <Form.Check
-                aria-label="option 4"
-                label="Game Developer"
-                onClick={() => handleFilter("Game Developer")}
-              />
+              <h5 style={{ color: "cyan" }}>Filter</h5>
+              <Form.Check aria-label="option 1" label="All"  onClick={() => handleFilter("All")}/>
+              <Form.Check aria-label="option 2" label="Web Developer"  onClick={() => handleFilter("Web Developer")}/>
+              <Form.Check aria-label="option 3" label="App Developer"  onClick={() => handleFilter("App Developer")}/>
+              <Form.Check aria-label="option 4" label="Game Developer"  onClick={() => handleFilter("Game Developer")}/>
               <Form.Check
                 aria-label="option 5"
                 label="Competitive Programmer"
